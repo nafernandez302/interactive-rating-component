@@ -1,63 +1,54 @@
-:root {
-    --orange: hsl(25, 97%, 53%);
-    --white: hsl(0, 0%, 100%);
-    --light-grey: hsl(217, 12%, 63%);
-    --dark-blue: hsl(213, 19%, 18%);
-    --very-dark-blue: hsl(216, 12%, 8%);
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: #0a0a0a;
-      --foreground: #ededed;
-    }
-  }
-  
-  body {
-    background: var(--very-dark-blue);
-    font-family: Overpass, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 0.1px);
-  }
-  
-  .light-gray-text {
-    color: var(--light-grey);
-  }
-  
-  .white-text {
-    color: var(--white);
-  }
-  
-  .ranking-container {
-    padding: 2.25rem;
-    background-color: var(--dark-blue);
-    max-width: 30%;
-    border-radius: 1rem;  
-  }
-  
 
-.rating-button{
-    background-color: hsl(212, 14%, 26%)
+.ranking-container {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  padding: 2.25rem;
+  background-color: var(--dark-blue);
+  max-width: 30%;
+  border-radius: 1rem;
 }
+
+body {
+  background: var(--very-dark-blue);
+  font-family: Overpass, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 0.1px);
+}
+
+.light-gray-text {
+  color: var(--light-grey);
+}
+
+.white-text {
+  color: var(--white);
+}
+
+.rating-button {
+  background-color: hsl(212, 14%, 26%);
+}
+
 .rating-button:hover {
-    background-color: var(--white);
-    color: var(--dark-blue);
+  background-color: var(--white);
+  color: var(--dark-blue);
 }
 
-.selected{
-    background-color: var(--orange) !important;
-  }
-
-.submit{
-    background-color: var(--orange);
+.selected {
+  background-color: var(--orange) !important;
 }
 
-.submit:hover{
-    background-color: var(--white);
+.submit {
+  background-color: var(--orange);
 }
 
-.text-orange{
+.submit:hover {
+  background-color: var(--white);
+}
+
+.text-orange {
   color: var(--orange);
 }
