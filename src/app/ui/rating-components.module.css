@@ -57,3 +57,7 @@
 .submit:hover{
     background-color: var(--white);
 }
+
+.text-orange{
+  color: var(--orange);
+}
