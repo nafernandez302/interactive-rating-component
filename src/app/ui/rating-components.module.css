@@ -11,15 +11,6 @@
   border-radius: 1rem;
 }
 
-body {
-  background: var(--very-dark-blue);
-  font-family: Overpass, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: calc(100vh - 0.1px);
-}
-
 .light-gray-text {
   color: var(--light-grey);
 }

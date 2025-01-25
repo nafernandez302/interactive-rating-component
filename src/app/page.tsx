@@ -1,6 +1,5 @@
 import Image from "next/image";
 import iconStar from "../../public/icon-star.svg";
-import { Overpass } from "next/font/google";
 import RatingComponent from "@/components/RatingComponent";
 
 export default function Home() {

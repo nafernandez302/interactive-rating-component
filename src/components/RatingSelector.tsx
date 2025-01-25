@@ -3,8 +3,13 @@ import Image from "next/image";
 import iconStar from "../../public/icon-star.svg";
 import styles from "@/app/ui/rating-components.module.css";
 
-const RatingSelector = ({ onSubmitRating, onRatingChange, number }: any) => {
-    const handleStarClick = (rating: number) => {
+type RatingSelectorProps = {
+    onSubmitRating: (rating:number | null) => void;
+    onRatingChange: (rating:number | null) => void;
+    number: number | null;
+}
+const RatingSelector = ({ onSubmitRating, onRatingChange, number }: RatingSelectorProps) => {
+    const handleStarClick = (rating: number | null) => {
         onRatingChange(rating);
     };
     return (
@@ -17,11 +22,10 @@ const RatingSelector = ({ onSubmitRating, onRatingChange, number }: any) => {
                 alt="Icon Star"
                 unoptimized
             />
-            <h1 className=" mt-4 white-text text-xl font-bold">
+            <h1 className="mt-4 white-text text-xl font-bold">
                 How did we do?
             </h1>
             <h2 className=" mt-4 light-gray-text text-sm">
-                {" "}
                 Please let us know how we did with your support request. All
                 feedback is appreciated to help us improve our offering!
             </h2>
@@ -42,7 +46,7 @@ const RatingSelector = ({ onSubmitRating, onRatingChange, number }: any) => {
                     ))}
                 </div>
                 <button
-                    onClick={onSubmitRating}
+                    onClick={() => onSubmitRating(number)}
                     className={`mt-3 p-2 ${styles["submit"]} rounded-full`}
                     disabled={number === null}
                 >

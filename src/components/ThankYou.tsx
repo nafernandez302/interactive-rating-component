@@ -2,7 +2,10 @@ import styles from "@/app/ui/rating-components.module.css";
 import illustration from "../../public/illustration-thank-you.svg";
 import Image from "next/image";
 
-export default function ThankYou({ number }: any) {
+type ThankYouProps = {
+    number: number | null;
+}
+export default function ThankYou({ number }: ThankYouProps) {
     return (
         <div className="flex flex-col items-center justify-center  text-center">
             <Image

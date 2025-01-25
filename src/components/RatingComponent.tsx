@@ -10,7 +10,7 @@ export default function RatingComponent() {
     const changeState = () => {
         setRatingState("thankyou");
     };
-    const changeRating = (rating: number): void => {
+    const changeRating = (rating: number | null): void => {
         setNumberSelected(rating);
     };
     return (
